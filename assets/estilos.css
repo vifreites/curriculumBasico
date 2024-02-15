@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    justify-content: space-between;
+    background-color: #0f0f0f;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    padding: 0px 24px;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+}
+.logo{
+    color:#f3eff3;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+span{
+    color: #fccc21;
+}
+
+.registro_conteneiner {
+    flex-direction: row;
+    margin: 0;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #f3eff3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    max-width: auto;
+    padding: 0%;
+
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+form {
+    background: #fcd731;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(37, 37, 37, 0.8);
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+input {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+
+
+input:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+label {
+    color:#c6c6c6;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 22px;
+    color: #5a5a5a;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+
+.button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #5a5a5a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fccc21, #998f04);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fccc21, #998f04);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media screen and (max-width:500px) {
+    img{
+        display: none;
+    }
+    form {
+        width: 100%; 
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 3px;
+        margin-top: 20px;
+    }
+
+}
+
+footer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding: 1rem;
+    background-color: #050505;
+    color: #c6c6c6;
+    position: absolute;
+    bottom: 0;
+
+}
